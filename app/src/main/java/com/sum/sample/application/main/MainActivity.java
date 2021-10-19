@@ -15,6 +15,7 @@ import com.sum.sample.application.dialog.DialogActivity;
 import com.sum.sample.application.drawer.SlidingDrawerActivity;
 import com.sum.sample.application.drop_down.DropDownActivity;
 import com.sum.sample.application.login.LoginActivity;
+import com.sum.sample.application.notification.NotificationActivity;
 import com.sum.sample.application.swipe_close.SwipeCloseActivity;
 import com.sum.sample.application.swipe_delete.SwipeDeleteActivity;
 import com.sum.sample.application.tab.TabLayoutActivity;
@@ -40,7 +41,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
     //标题栏与banner图下边缘的距离
     private int distance;
     private final List<String> datas = Arrays.asList("tabLayout", "详情样式demo", "CoordinatorLayout Demo", "弹窗",
-            "图片选择器", "下拉窗", "侧滑删除", "侧滑返回", "网络请求测试", "Wheel", "加入购物车", "悬浮按钮",
+            "图片选择器", "下拉窗", "侧滑删除", "侧滑返回", "通知栏", "Wheel", "加入购物车", "悬浮按钮",
             "登录功能", "规格自适应", "侧滑菜单");
 
     @Override
@@ -111,8 +112,9 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
                                                                 case 7:
                                                                     ActivityUtils.startActivity(activity, SwipeCloseActivity.class);
                                                                     break;
-                                                                //网络请求测试
+                                                                //通知栏
                                                                 case 8:
+                                                                    ActivityUtils.startActivity(activity, NotificationActivity.class);
                                                                     break;
                                                                 //Wheel
                                                                 case 9:
