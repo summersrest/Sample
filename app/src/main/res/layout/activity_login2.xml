@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="登录"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+            android:src="@mipmap/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="XXXXX"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@mipmap/login_div" />
+
+    <com.noober.background.view.BLLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/login_div"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/login_div"
+        android:gravity="center_vertical"
+        app:bl_corners_radius="25dp"
+        app:bl_stroke_color="@color/login_grey_color"
+        app:bl_stroke_width="2dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/icon_login_phone" />
+
+        <EditText
+            android:id="@+id/et_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="请输入账号"
+            android:paddingStart="20dp" />
+    </com.noober.background.view.BLLinearLayout>
+
+    <com.noober.background.view.BLLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/login_div"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/login_div"
+        android:gravity="center_vertical"
+        app:bl_corners_radius="25dp"
+        app:bl_stroke_color="@color/login_grey_color"
+        app:bl_stroke_width="2dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/icon_login_pwd" />
+
+        <EditText
+            android:id="@+id/et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:paddingStart="20dp" />
+    </com.noober.background.view.BLLinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/login_div">
+
+        <TextView
+            android:id="@+id/tv_forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="忘记密码"
+            android:textColor="@color/colorText07" />
+    </LinearLayout>
+
+    <com.noober.background.view.BLButton
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/login_div"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/login_div"
+        android:text="登录"
+        android:textColor="@color/white"
+        app:bl_corners_radius="25dp"
+        app:bl_pressed_solid_color="@color/color_pressed"
+        app:bl_unPressed_solid_color="@color/blue" />
+
+    <TextView
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/login_div"
+        android:layout_marginEnd="@dimen/login_div"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="新用户注册"
+        android:textColor="@color/blue" />
+</LinearLayout>

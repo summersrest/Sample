@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="主标题"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="这是小标题呀小呀小标题"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/more_root"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="5dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/more_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/more_function" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <com.noober.background.view.BLButton
+        android:id="@+id/del_btn"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="删除"
+        app:bl_pressed_solid_color="@color/color_pressed"
+        app:bl_pressed_textColor="@color/colorText"
+        app:bl_unPressed_solid_color="@color/colorRed"
+        app:bl_unPressed_textColor="@color/white" />
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

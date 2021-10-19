@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.sum.titlebar.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tb_background_drawable="@drawable/shape_login"
+        app:tb_divider_visible="gone"
+        app:tb_icon_back="@mipmap/back_white"
+        app:tb_title="登录"
+        app:tb_title_color="@color/white" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        app:divider="@drawable/line"
+        app:showDividers="middle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="手机号：" />
+
+            <com.sum.sample.base.view.PhoneEditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="验证码：" />
+
+            <com.sum.sample.base.view.CountDownButton
+                android:id="@+id/btn_auth"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/oauth_btn_selector"
+                android:textColor="@color/white"
+                app:countDown="60000"
+                app:countDownFormat="(%ds)后重试"
+                app:countDownInterval="1000"
+                app:defaultText="发送验证码"
+                app:enableCountDown="false" />
+
+            <EditText
+                android:id="@+id/et_auth"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_toStartOf="@+id/btn_auth"
+                android:layout_toEndOf="@+id/tv1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="密    码：" />
+
+            <ToggleButton
+                android:id="@+id/tb_check"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/pwd_check_bg"
+                android:checked="false"
+                android:textOff=""
+                android:textOn="" />
+
+            <com.sum.sample.base.view.PwdEditText
+                android:id="@+id/et_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@+id/tb_check"
+                android:layout_toEndOf="@+id/tv2"
+                android:background="@null"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <com.sum.sample.base.view.smooth_material.MaterialCheckBox
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <com.sum.sample.base.view.smooth_material.SmoothCheckBox
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp" />
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/oauth_btn_selector"
+        android:text="登录"
+        android:textColor="@color/white" />
+</LinearLayout>

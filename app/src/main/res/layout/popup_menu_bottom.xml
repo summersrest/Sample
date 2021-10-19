@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_title"
+        android:background="#F0F5F4"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="46dp"/>
+    <com.sum.simple.SimpleRecyclerView
+        android:id="@+id/recycler_view"
+        app:rv_divider_color="#E6E6E6"
+        app:rv_divider_size="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

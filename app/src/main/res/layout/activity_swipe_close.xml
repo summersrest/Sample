@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sum.titlebar.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tb_title="侧滑返回" />
+
+    <com.noober.background.view.BLButton
+        android:id="@+id/btn_on"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="@dimen/padding"
+        android:text="开启侧滑返回"
+        app:bl_corners_radius="6dp"
+        app:bl_pressed_solid_color="@color/color_pressed"
+        app:bl_pressed_textColor="@color/colorText"
+        app:bl_unPressed_solid_color="@color/blue"
+        app:bl_unPressed_textColor="@color/white" />
+
+    <com.noober.background.view.BLButton
+        android:id="@+id/btn_off"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="@dimen/padding"
+        android:text="关闭侧滑返回"
+        app:bl_corners_radius="6dp"
+        app:bl_pressed_solid_color="@color/color_pressed"
+        app:bl_pressed_textColor="@color/colorText"
+        app:bl_unPressed_solid_color="@color/green"
+        app:bl_unPressed_textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="向右滑动试试"
+        android:textSize="26sp" />
+</LinearLayout>

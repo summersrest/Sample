@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <com.sum.titlebar.TitleBar
+        android:id="@+id/title_bar"
+        app:tb_title="popupWindow弹出方向与箭头自适应"
+        app:tb_title_bar_size="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <com.noober.background.view.BLButton
+                android:id="@+id/button0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="弹出"
+                app:bl_corners_radius="6dp"
+                app:bl_pressed_solid_color="@color/color_pressed"
+                app:bl_pressed_textColor="@color/black"
+                app:bl_unPressed_solid_color="@color/colorBlue"
+                app:bl_unPressed_textColor="@color/white"/>
+
+            <com.noober.background.view.BLButton
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="弹出"
+                app:bl_corners_radius="6dp"
+                app:bl_pressed_solid_color="@color/color_pressed"
+                app:bl_pressed_textColor="@color/black"
+                app:bl_unPressed_solid_color="@color/colorBlue"
+                app:bl_unPressed_textColor="@color/white"/>
+
+            <com.noober.background.view.BLButton
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:text="弹出"
+                app:bl_corners_radius="6dp"
+                app:bl_pressed_solid_color="@color/color_pressed"
+                app:bl_pressed_textColor="@color/black"
+                app:bl_unPressed_solid_color="@color/colorBlue"
+                app:bl_unPressed_textColor="@color/white"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp">
+
+            <com.noober.background.view.BLButton
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="弹出"
+                app:bl_corners_radius="6dp"
+                app:bl_pressed_solid_color="@color/color_pressed"
+                app:bl_pressed_textColor="@color/black"
+                app:bl_unPressed_solid_color="@color/colorBlue"
+                app:bl_unPressed_textColor="@color/white"/>
+
+            <com.noober.background.view.BLButton
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="弹出"
+                app:bl_corners_radius="6dp"
+                app:bl_pressed_solid_color="@color/color_pressed"
+                app:bl_pressed_textColor="@color/black"
+                app:bl_unPressed_solid_color="@color/colorBlue"
+                app:bl_unPressed_textColor="@color/white"/>
+
+            <com.noober.background.view.BLButton
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:text="弹出"
+                app:bl_corners_radius="6dp"
+                app:bl_pressed_solid_color="@color/color_pressed"
+                app:bl_pressed_textColor="@color/black"
+                app:bl_unPressed_solid_color="@color/colorBlue"
+                app:bl_unPressed_textColor="@color/white"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

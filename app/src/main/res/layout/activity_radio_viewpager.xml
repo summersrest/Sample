@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/tab_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        app:divider="@drawable/line"
+        app:showDividers="beginning">
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="2dip"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <RadioButton
+                android:id="@+id/main_home_page"
+                style="@style/tab_main_item_background"
+                android:checked="true"
+                android:drawableTop="@drawable/tab_home_selector"
+                android:text="首页" />
+
+            <RadioButton
+                android:id="@+id/main_share_page"
+                style="@style/tab_main_item_background" />
+
+            <RadioButton
+                android:id="@+id/main_my_page"
+                style="@style/tab_main_item_background"
+                android:drawableTop="@drawable/tab_my_selector"
+                android:text="我" />
+        </RadioGroup>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/tab_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/home_open_door"/>
+</RelativeLayout>

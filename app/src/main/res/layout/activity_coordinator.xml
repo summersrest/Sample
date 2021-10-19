@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:contentScrim="@color/colorRed"
+            app:expandedTitleMarginBottom="100dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="我是collapsebar的标题">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@mipmap/img36"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="第一个固定(pin)"
+                android:textSize="40sp"
+                app:layout_collapseMode="pin" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="不设置,跟随滑动"
+                android:textSize="40sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="视察效果(parallax)"
+                android:textSize="40sp"
+                app:layout_collapseMode="parallax" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="top"
+                android:background="#660000ff"
+                app:layout_collapseMode="pin">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:src="@mipmap/icon_flower_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我是toolbar"
+                        android:textColor="#fff" />
+                </LinearLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_behavior=".base.view.FixScrollingFooterBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/detail_content"/>
+    </androidx.core.widget.NestedScrollView>
+
+    <!--backgroundTint背景颜色-->
+    <!--rippleColor点击背景颜色-->
+    <!--borderWidth固定0dp，不添加该属性部分手机显示有问题-->
+    <!--scaleType="center"会把中间的小图放到最大-->
+    <!--设置大小在dimen中添加<dimen name="design_fab_size_normal" tools:ignore="PrivateResource">56dp</dimen>-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:scaleType="center"
+        android:src="@android:drawable/ic_dialog_email"
+        app:backgroundTint="@color/colorRed"
+        app:borderWidth="0dp"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="right|bottom|end"
+        app:rippleColor="@color/tab_unpressed"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

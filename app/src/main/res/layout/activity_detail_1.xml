@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadMore="false"
+        app:srlEnableLoadMore="false"
+        app:srlEnableRefresh="true">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/banner_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/img19" />
+
+                <com.sum.multiple.MultipleStatusView
+                    android:id="@+id/mu_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <include
+                        android:id="@+id/content_view"
+                        layout="@layout/detail_content" />
+                </com.sum.multiple.MultipleStatusView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+    <com.sum.titlebar.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tb_background_alpha="0"
+        app:tb_background_color="@color/white"
+        app:tb_divider_alpha="0"
+        app:tb_divider_color="#E7E7E7"
+        app:tb_icon_back="@mipmap/back_white"
+        app:tb_title="中华美食"
+        app:tb_title_bar_size="60dp"
+        app:tb_title_color="@color/white" />
+
+
+</FrameLayout>

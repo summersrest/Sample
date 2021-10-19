@@ -1,0 +1,88 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion '30.0.3'
+
+    defaultConfig {
+        applicationId "com.sum.sample"
+        minSdk 24
+        targetSdk 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    //开启ViewBinding
+    buildFeatures {
+        viewBinding = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation files('libs/commons-codec-1.4.jar')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    //okhttp封装
+    implementation 'com.lzy.net:okgo:3.0.4'
+    //fastjson
+    implementation 'com.alibaba:fastjson:1.2.73'
+    //eventbus
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    //沉浸式状态栏
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    //多状态View
+    implementation 'com.github.summersrest:MultipleStatusView:v1.0.0'
+    //recyclerview封装
+    implementation 'com.github.summersrest:simple_recycler_view:v1.0.0'
+    //adapter封装
+    implementation 'com.github.summersrest:SimpleAdapter:v1.0.2'
+    //titleBar
+    implementation 'com.github.summersrest:TitleBar:v1.0.7'
+    //图片展示控件
+    implementation 'com.github.summersrest:PictureShow:v1.0.1'
+    //rxjava
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    //shape
+    implementation 'com.noober.background:core:1.4.4'
+    //下拉刷新
+    implementation  'com.scwang.smart:refresh-layout-kernel:2.0.3'
+    implementation  'com.scwang.smart:refresh-header-classics:2.0.3'
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    //tab
+    implementation 'com.github.li-xiaojun:FlycoTabLayout:2.0.6'
+    //图片选择器
+    implementation 'io.github.lucksiege:pictureselector:v2.7.3-rc08'
+    //侧滑删除
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    //侧滑返回
+    implementation 'com.youngfeng.android:snake-androidx:0.4.1'
+    annotationProcessor 'com.youngfeng.android:snake-compiler-androidx:0.4.1'
+    //WheelView
+    implementation 'com.github.princekin-f:Android-PickerView:0.0.1'
+    //滑动隐藏悬浮按钮所需控件
+    implementation 'com.nineoldandroids:library:2.4.0'
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.sum.titlebar.TitleBar
+        android:id="@+id/title_bar"
+        app:tb_title="弹出方向"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/top_rb"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="上方"/>
+
+        <RadioButton
+            android:id="@+id/bottom_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="下方"/>
+
+        <RadioButton
+            android:id="@+id/left_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="左边"/>
+
+        <RadioButton
+            android:id="@+id/right_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="右边"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/anchor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <com.noober.background.view.BLButton
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="弹出"
+            app:bl_corners_radius="6dp"
+            app:bl_pressed_solid_color="@color/color_pressed"
+            app:bl_pressed_textColor="@color/black"
+            app:bl_unPressed_solid_color="@color/colorBlue"
+            app:bl_unPressed_textColor="@color/white"/>
+    </LinearLayout>
+</LinearLayout>

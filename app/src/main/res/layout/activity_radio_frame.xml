@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/id_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_line"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
+
+    <View
+        android:id="@+id/main_line"
+        style="@style/tab_line"
+        android:layout_height="0.8dp"
+        android:layout_above="@+id/main_radio"/>
+
+    <RadioGroup
+        android:id="@+id/main_radio"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="2dip">
+
+        <RadioButton
+            android:id="@+id/main_home_page"
+            style="@style/tab2_main_item_background"
+            android:checked="true"
+            android:drawableTop="@drawable/tab2_home_selector"
+            android:text="首页"/>
+
+        <RadioButton
+            android:id="@+id/main_order_page"
+            style="@style/tab2_main_item_background"
+            android:drawableTop="@drawable/tab2_order_selector"
+            android:text="订单"/>
+
+        <RadioButton
+            android:id="@+id/main_my_page"
+            style="@style/tab2_main_item_background"
+            android:drawableTop="@drawable/tab2_my_selector"
+            android:text="我"/>
+
+        <RadioButton
+            android:id="@+id/main_my_page1"
+            style="@style/tab2_main_item_background"
+            android:drawableTop="@drawable/tab2_my_selector"
+            android:text="我"/>
+
+    </RadioGroup>
+</RelativeLayout>

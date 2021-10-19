@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--状态栏底色-->
+        <item name="colorPrimary">@color/white</item>
+        <!--&lt;!&ndash;App bar 底色&ndash;&gt;-->
+        <item name="colorPrimaryDark">@color/colorTitle</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Support.CoordinatorLayout</item>
+        <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowToggle</item>
+    </style>
+
+    <style name="AppTheme.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+</resources>

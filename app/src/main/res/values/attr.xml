@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TakePhotoButton">
+        <!--外圆颜色-->
+        <attr name="outCircleColor" format="color"/>
+        <!--内圆颜色-->
+        <attr name="innerCircleColor" format="color"/>
+        <!--进度条颜色-->
+        <attr name="readColor" format="color"/>
+        <!--录制时间-->
+        <attr name="maxSeconds" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="PullDownLayout">
+        <!--图片-->
+        <attr name="pl_icon" format="reference" />
+        <!--文字-->
+        <attr name="pl_text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="MaxHeightView">
+        <attr name="mhv_HeightRatio" format="reference|float" />
+        <attr name="mhv_HeightDimen" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="AmountBtn">
+        <!-- 左右2边+-按钮的宽度 -->
+        <attr name="btnWidth" format="dimension" />
+        <!-- 中间TextView的宽度 -->
+        <attr name="tvWidth" format="dimension" />
+        <!--<attr name="tvColor" format="color"/>-->
+        <attr name="tvTextSize" format="dimension" />
+        <attr name="btnTextSize" format="dimension" />
+        <attr name="editable" format="boolean" />
+        <attr name="minAmount" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="DragView">
+        <attr name="fb_distance_left" format="dimension"/>
+        <attr name="fb_distance_right" format="dimension"/>
+        <attr name="fb_distance_top" format="dimension"/>
+        <attr name="fb_distance_bottom" format="dimension"/>
+        <attr name="fb_distance" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="PwdEditText">
+        <attr name="minLength" format="integer" />
+        <attr name="maxLength" format="integer" />
+    </declare-styleable>
+
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+
+    <declare-styleable name="SmoothCheckBox">
+        <attr name="stroke_width" format="dimension" />
+        <attr name="color_tick" format="color" />
+        <attr name="color_checked" format="color" />
+        <attr name="color_unchecked" format="color" />
+        <attr name="color_unchecked_stroke" format="color" />
+        <attr name="durations" format="integer" />
+    </declare-styleable>
+
+    <!--倒计时按钮-->
+    <declare-styleable name="CountDownButton">
+        <attr name="countDownFormat" format="string" />
+        <attr name="defaultText" format="string" />
+        <attr name="countDown" format="float" />
+        <attr name="countDownInterval" format="float" />
+        <attr name="enableCountDown" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="WaveView">
+        <!--外圆颜色-->
+        <attr name="solidColor" format="color"/>
+    </declare-styleable>
+
+
+
+</resources>

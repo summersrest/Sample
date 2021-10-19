@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sum.titlebar.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tb_text_action="弹出"
+        app:tb_text_action_color="@color/appColor"
+        app:title="下拉窗" />
+
+    <FrameLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <com.sum.sample.base.view.PullDownLayout
+                    android:id="@+id/pdl_district"
+                    style="@style/style_selected_ratio"
+                    app:pl_icon="@mipmap/arr_down_triangle"
+                    app:pl_text="区域" />
+                <com.sum.sample.base.view.PullDownLayout
+                    android:id="@+id/pdl_price"
+                    style="@style/style_selected_ratio"
+                    app:pl_icon="@mipmap/arr_down_triangle"
+                    app:pl_text="价格" />
+                <com.sum.sample.base.view.PullDownLayout
+                    android:id="@+id/pdl_area"
+                    style="@style/style_selected_ratio"
+                    app:pl_icon="@mipmap/arr_down_triangle"
+                    app:pl_text="面积" />
+                <com.sum.sample.base.view.PullDownLayout
+                    android:id="@+id/pdl_room"
+                    style="@style/style_selected_ratio"
+                    app:pl_icon="@mipmap/arr_down_triangle"
+                    app:pl_text="厅室" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_view"
+                style="@style/tab_line"/>
+
+            <FrameLayout
+                android:id="@+id/shade_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="我是内容"
+                    android:textColor="@color/colorText"
+                    android:textSize="20sp" />
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="280dp"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/mIv"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:src="@mipmap/img9"
+            android:scaleType="centerCrop"/>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:title="我是弹出的PopupWindow"
+            app:titleTextColor="@android:color/white"/>
+    </FrameLayout>
+
+    <TextView
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/top_view"
+        android:text="重点（必读）：只是简单设置下即可实现沉浸式，重点是 popupwindow.setClippingEnabled(false)这个方法，此方法会导致有导航栏的手机底部被导航栏覆盖，放弃沉浸式吧"
+        android:textColor="@color/colorRed"
+        android:layout_above="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/account_et"
+            android:hint="登录账号"
+            android:maxLength="20"
+            style="@style/account_dialog_et"
+            android:layout_margin="20dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

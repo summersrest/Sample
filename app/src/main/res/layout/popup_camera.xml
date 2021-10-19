@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#00000000"
+              android:orientation="vertical"
+              android:paddingBottom="10dp"
+              android:paddingTop="10dp">
+
+    <Button
+        android:id="@+id/picture_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/btn_dialog_top_selector"
+        android:text="选择图片"/>
+
+    <View
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        style="@style/style_line"/>
+
+    <Button
+        android:id="@+id/video_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/btn_dialog_bottom_selector"
+        android:text="选择视频"/>
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_dialog_white_selector"
+        android:text="取消"
+        android:textColor="@color/colorTextDeepGray"/>
+</LinearLayout>
