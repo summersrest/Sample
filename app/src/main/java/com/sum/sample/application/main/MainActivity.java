@@ -22,6 +22,7 @@ import com.sum.sample.application.tab.TabLayoutActivity;
 import com.sum.sample.application.wheel.WheelActivity;
 import com.sum.sample.base.activity.BaseActivity;
 import com.sum.sample.base.utils.ActivityUtils;
+import com.sum.sample.base.utils.L;
 import com.sum.sample.base.utils.ToastUtils;
 import com.sum.sample.databinding.ActivityMainBinding;
 import com.sum.sample.databinding.ItemMainBinding;
@@ -30,6 +31,13 @@ import com.sum.simpleadapter.base.ViewHolder;
 
 import java.util.Arrays;
 import java.util.List;
+
+import io.reactivex.Observable;
+import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 
 
 /**
@@ -42,7 +50,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
     private int distance;
     private final List<String> datas = Arrays.asList("tabLayout", "详情样式demo", "CoordinatorLayout Demo", "弹窗",
             "图片选择器", "下拉窗", "侧滑删除", "侧滑返回", "通知栏", "Wheel", "加入购物车", "悬浮按钮",
-            "登录功能", "规格自适应", "侧滑菜单");
+            "登录功能", "规格自适应", "侧滑菜单", "spinner");
 
     @Override
     protected void setStatusBar() {
@@ -174,6 +182,33 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
                 }
             }
         });
+
+
+
+
+
+        Disposable subscribe = Observable.create((ObservableOnSubscribe<Integer>) emitter -> {
+            //子线程
+            L.showD("doOnNext：" + Thread.currentThread().getName());
+            try {
+                Thread.sleep(3000);
+            } catch (Exception e) {
+
+            }
+            //子线程
+            L.showD("doOnNext：" + Thread.currentThread().getName());
+            emitter.onNext(6);
+        }).subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<Integer>() {
+                    @Override
+                    public void accept(Integer integer) throws Exception {
+                        //主线程
+                        L.showD("consumer：" + Thread.currentThread().getName());
+                        L.showD("value：" + integer);
+                    }
+                });
+        
     }
 
 

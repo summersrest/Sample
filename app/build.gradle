@@ -85,4 +85,7 @@ dependencies {
     implementation 'com.github.princekin-f:Android-PickerView:0.0.1'
     //滑动隐藏悬浮按钮所需控件
     implementation 'com.nineoldandroids:library:2.4.0'
+    //弹出框
+    implementation 'com.github.li-xiaojun:XPopup:2.7.6'
+
 }

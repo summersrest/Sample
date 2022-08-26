@@ -35,7 +35,6 @@ public class DialogCenter  extends Dialog {
         super.onCreate(savedInstanceState);
         viewBinding = DialogCenterBinding.inflate(getLayoutInflater());
         setContentView(viewBinding.getRoot());
-//        setContentView(R.layout.dialog_center);
 
         viewBinding.masterMcb.setChecked(true);
         viewBinding.masterLayout.setOnClickListener(new OnCheckedEven());

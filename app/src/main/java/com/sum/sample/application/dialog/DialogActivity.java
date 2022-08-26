@@ -39,7 +39,8 @@ import java.util.List;
 public class DialogActivity extends BaseActivity<ActivityDialogBinding> {
     private final List<String> datas = Arrays.asList("屏幕中央dialog", "屏幕顶部dialog", "屏幕左边dialog", "屏幕右边dialog", "屏幕底部dialog",
             "屏幕中央PopupWindow", "屏幕顶部PopupWindow", "屏幕左边PopupWindow", "屏幕右边PopupWindow", "屏幕底部PopupWindow",
-            "popupWindows各方向弹出", "popupWindows方向与箭头自适应", "popupWindows列表中自适应", "popupWindows封装控件底部弹出");
+            "popupWindows各方向弹出", "popupWindows方向与箭头自适应", "popupWindows列表中自适应", "popupWindows封装控件底部弹出",
+            "列表弹窗封装");
     //屏幕中央dialog
     DialogCenter dialogCenter;
     //顶部弹出dialog
@@ -181,6 +182,10 @@ public class DialogActivity extends BaseActivity<ActivityDialogBinding> {
                             //popupWindows封装控件底部弹出
                             case 13:
                                 menuBottomView.show(activity, findViewById(R.id.content_layout));
+                                break;
+                            //列表dialog封装
+                            case 14:
+                                ActivityUtils.startActivity(activity, ListDialogActivity.class);
                                 break;
                         }
                     }

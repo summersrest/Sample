@@ -1,2 +1,3 @@
 rootProject.name = "Sample"
 include ':app'
+include ':generatorLib'

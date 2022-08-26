@@ -38,6 +38,7 @@ public class PwdEditText extends androidx.appcompat.widget.AppCompatEditText {
         TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attrs, R.styleable.PwdEditText);
         min = obtainStyledAttributes.getInt(R.styleable.PwdEditText_minLength, 6);
         max = obtainStyledAttributes.getInt(R.styleable.PwdEditText_maxLength, 20);
+        obtainStyledAttributes.recycle();
         //输入内容
         setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         //密码格式
