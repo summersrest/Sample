@@ -130,7 +130,6 @@ public class ListDialogActivity extends BaseActivity<ActivityListDialogBinding> 
                                     .setAlign(SimpleListDialog.ALIGN_CENTER)
                                     .setTitle("标题")
                                     .setData(itemListWithIcon)
-                                    .setCheckedPosition(2)
                                     .setTextFormatter(new TextFormatter<ItemDialogBean>() {
                                         @Override
                                         public String format(ItemDialogBean item13) {
