@@ -20,7 +20,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_behavior=".base.view.FixScrollingFooterBehavior">
+        app:layout_behavior=".base.widget.FixScrollingFooterBehavior">
 
         <include layout="@layout/detail_content"/>
     </androidx.core.widget.NestedScrollView>

@@ -43,7 +43,7 @@
         android:id="@+id/refresh_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior=".base.view.FixScrollingFooterBehavior"
+        app:layout_behavior=".base.widget.FixScrollingFooterBehavior"
         app:srlEnableAutoLoadMore="false"
         app:srlEnableLoadMore="false"
         app:srlEnableRefresh="true">

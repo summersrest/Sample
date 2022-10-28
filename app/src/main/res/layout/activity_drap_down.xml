@@ -29,22 +29,22 @@
                 android:background="@color/white"
                 android:orientation="horizontal">
 
-                <com.sum.sample.base.view.PullDownLayout
+                <com.sum.sample.base.widget.PullDownLayout
                     android:id="@+id/pdl_district"
                     style="@style/style_selected_ratio"
                     app:pl_icon="@mipmap/arr_down_triangle"
                     app:pl_text="区域" />
-                <com.sum.sample.base.view.PullDownLayout
+                <com.sum.sample.base.widget.PullDownLayout
                     android:id="@+id/pdl_price"
                     style="@style/style_selected_ratio"
                     app:pl_icon="@mipmap/arr_down_triangle"
                     app:pl_text="价格" />
-                <com.sum.sample.base.view.PullDownLayout
+                <com.sum.sample.base.widget.PullDownLayout
                     android:id="@+id/pdl_area"
                     style="@style/style_selected_ratio"
                     app:pl_icon="@mipmap/arr_down_triangle"
                     app:pl_text="面积" />
-                <com.sum.sample.base.view.PullDownLayout
+                <com.sum.sample.base.widget.PullDownLayout
                     android:id="@+id/pdl_room"
                     style="@style/style_selected_ratio"
                     app:pl_icon="@mipmap/arr_down_triangle"

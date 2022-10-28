@@ -45,7 +45,7 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_behavior=".base.view.FixScrollingFooterBehavior"
+        app:layout_behavior=".base.widget.FixScrollingFooterBehavior"
         app:rv_divider_color="@color/div_color"
         app:rv_divider_size="1dp" />
 

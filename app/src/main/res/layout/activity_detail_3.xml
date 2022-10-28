@@ -68,7 +68,7 @@
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
-        app:layout_behavior=".base.view.FixScrollingFooterBehavior"
+        app:layout_behavior=".base.widget.FixScrollingFooterBehavior"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

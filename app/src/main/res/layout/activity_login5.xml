@@ -96,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical">
 
-                <com.sum.sample.base.view.smooth_material.MaterialCheckBox
+                <com.sum.sample.base.widget.smooth_material.MaterialCheckBox
                     android:id="@+id/rember_cb"
                     android:layout_width="30dp"
                     android:layout_height="30dp"/>

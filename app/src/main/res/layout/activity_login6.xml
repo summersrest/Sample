@@ -103,7 +103,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <com.sum.sample.base.view.smooth_material.MaterialCheckBox
+            <com.sum.sample.base.widget.smooth_material.MaterialCheckBox
                 android:id="@+id/cb_remember"
                 android:layout_width="30dp"
                 android:layout_height="30dp"/>
